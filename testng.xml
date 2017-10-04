@@ -1,4 +1,4 @@
-<suite name="MultiBrowserSuite" parallel="tests" thread-count="2">
+<suite name="MultiBrowserSuite" parallel="none" >
     <test name="TestFirefox">
         <parameter name="browser" value="Firefox"/>
         <classes>
