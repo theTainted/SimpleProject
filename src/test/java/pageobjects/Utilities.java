@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 
 public class Utilities {
     protected WebDriver driver;
+    public String sURL="https://"+"storefront"+":"+"storefront"+"@"+"staging.cortefiel.com/es/es";
 
     @BeforeClass
     @Parameters("browser")
