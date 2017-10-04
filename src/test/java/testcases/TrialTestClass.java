@@ -3,14 +3,14 @@ package testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import pageobjects.Utilities;
 
-public class TrialTestClass {
+public class TrialTestClass extends Utilities{
     @Test
     public void testTrialTestClass(){
-        WebDriver driver;
 
-        System.setProperty("webdriver.chrome.driver", "C:/BrowserUtilities/chromedriver.exe");
-        driver = new ChromeDriver();
+
+
         driver.get("http://google.com");
 
     }

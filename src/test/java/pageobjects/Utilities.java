@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 public class Utilities {
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeClass
     @Parameters("browser")
