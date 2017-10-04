@@ -3,15 +3,17 @@ package testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import pageobjects.HomePage;
 import pageobjects.Utilities;
 
 public class TrialTestClass extends Utilities{
-    @Test
-    public void testTrialTestClass(){
+    Utilities utilities = new Utilities();
+    HomePage homePage = new HomePage(driver);
+ @Test
 
-
-
-        driver.get("http://google.com");
+ public void testTrialTestClass(){
+        driver.get(utilities.sURL);
+        homePage.clickOnbtnCloseNewsLetter();
 
     }
 }

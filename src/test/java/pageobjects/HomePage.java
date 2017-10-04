@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends Utilities {
+    Utilities utilities = new Utilities();
 
     @FindBy(xpath = "//button/span[@class='ui-button-icon-primary ui-icon ui-icon-closethick']")
     WebElement btnCloseNewsLetter;
@@ -14,8 +15,11 @@ public class HomePage extends Utilities {
     public HomePage(WebDriver driver) {
 
         //  this.general.driver=driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(utilities.driver, this);
     }
 
+    public void clickOnbtnCloseNewsLetter(){
+        btnCloseNewsLetter.click();
 
+    }
 }
