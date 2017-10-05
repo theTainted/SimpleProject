@@ -4,6 +4,7 @@
         <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="testcases.TrialTestClass"></class>
+            <class name="testcases.TrialSecondClass"></class>
         </classes>
     </test>
 
@@ -11,6 +12,7 @@
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="testcases.TrialTestClass"/>
+            <class name="testcases.TrialSecondClass"></class>
         </classes>
     </test>
 </suite>
