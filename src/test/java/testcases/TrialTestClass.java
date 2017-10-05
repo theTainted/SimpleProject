@@ -55,7 +55,7 @@ public class TrialTestClass {
 
 
         } else if (browser.equalsIgnoreCase("Firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:/BrowserUtilities/geckodriver.exe");
+            System.setProperty("webdriver.firefox.marionette", "C:/BrowserUtilities/geckodriver.exe");
 
             FirefoxDriver driver = new FirefoxDriver();
 
