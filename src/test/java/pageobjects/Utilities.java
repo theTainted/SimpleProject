@@ -14,7 +14,7 @@ public class Utilities {
     @BeforeClass
     @Parameters("browser")
 
-    public static void setUp(String browser){ // changed to static
+    public static void setUp( String browser){ // changed to static
 
 
 
