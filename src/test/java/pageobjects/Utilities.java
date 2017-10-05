@@ -10,11 +10,11 @@ import org.testng.annotations.Parameters;
 public class Utilities {
    public static WebDriver driver; // changed to static
     public String sURL="https://"+"storefront"+":"+"storefront"+"@"+"staging.cortefiel.com/es/es";
-
+ /*
     @BeforeClass
     @Parameters("browser")
 
-    public static void setUp( String browser){ // changed to static
+   public static void setUp( String browser){ // changed to static
 
 
 
@@ -29,8 +29,8 @@ public class Utilities {
         else if (browser.equalsIgnoreCase("IE"))
 
         {
-          /*  DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-            caps.setCapability("ignoreZoomSetting", true);*/
+            DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+            caps.setCapability("ignoreZoomSetting", true);
 
             System.setProperty("webdriver.ie.driver", "C:/BrowserUtilities/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
@@ -45,7 +45,7 @@ public class Utilities {
 
         }
 
-    }
+    }*/
 
 
 }
