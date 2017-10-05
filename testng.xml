@@ -1,12 +1,12 @@
 <suite name="MultiBrowserSuite" parallel="none" >
-   <!--
+
     <test name="TestFirefox">
         <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="testcases.TrialTestClass"></class>
         </classes>
     </test>
-    -->
+
     <test name="TestChrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
