@@ -14,8 +14,8 @@ public class HomePage extends Utilities {
 
     public HomePage(WebDriver driver) {
 
-        Utilities.driver=driver; //-> added after making the driver static
-        PageFactory.initElements(this.driver,this);
+       // Utilities.driver=driver; //-> added after making the driver static
+        PageFactory.initElements(driver,this);
     }
 
     public void clickOnbtnCloseNewsLetter(){
