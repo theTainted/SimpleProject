@@ -8,11 +8,11 @@ import pageobjects.Utilities;
 
 public class TrialTestClass extends Utilities{
     Utilities utilities = new Utilities();
-    HomePage homePage = new HomePage(driver);
+    HomePage homePage = new HomePage(utilities.driver);
  @Test
 
  public void testTrialTestClass(){
-        driver.get(utilities.sURL);
+        utilities.driver.get(sURL);
         homePage.clickOnbtnCloseNewsLetter();
 
     }

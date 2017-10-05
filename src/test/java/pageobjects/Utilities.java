@@ -8,13 +8,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 public class Utilities {
-   public WebDriver driver;
+   public static WebDriver driver; // changed to static
     public String sURL="https://"+"storefront"+":"+"storefront"+"@"+"staging.cortefiel.com/es/es";
 
     @BeforeClass
     @Parameters("browser")
 
-    public void setUp(String browser){
+    public static void setUp(String browser){ // changed to static
 
 
 
