@@ -7,7 +7,9 @@ import pageobjects.HomePage;
 import pageobjects.Utilities;
 
 public class TrialTestClass extends Utilities{
+
     Utilities utilities = new Utilities();
+
     HomePage homePage = new HomePage(utilities.driver);
  @Test
 
