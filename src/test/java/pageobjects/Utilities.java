@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 public class Utilities {
-   public static WebDriver driver; // changed to static
+ /*  public static WebDriver driver; // changed to static
     public String sURL="https://"+"storefront"+":"+"storefront"+"@"+"staging.cortefiel.com/es/es";
- /*
+
     @BeforeClass
     @Parameters("browser")
 
