@@ -57,8 +57,8 @@ public class Screenshot {
 
 
 
-                System.setProperty("webdriver.chrome.driver", "C:/BrowserUtilities/chromedriver.exe");
-                driver = new ChromeDriver();
+          /*      System.setProperty("webdriver.chrome.driver", "C:/BrowserUtilities/chromedriver.exe");
+                driver = new ChromeDriver();*/
                 driver.manage().window().maximize();
                 driver.navigate().to("https://www.laprairie.com.au/au/home?ncr=true");
             new AShot()
@@ -75,7 +75,7 @@ public class Screenshot {
         public void getscreenshot() throws Exception
         {
             JavascriptExecutor jse = (JavascriptExecutor)driver;
-            jse.executeScript("window.scrollBy(0,250)", "");
+            jse.executeScript("window.scrollBy(0,1000)", "");
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             //The below method will save the screen shot in d drive with name "screenshot.png"
             FileUtils.copyFile(scrFile, new File("C:\\screenshot1.png"));
