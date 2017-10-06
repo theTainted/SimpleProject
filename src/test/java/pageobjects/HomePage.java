@@ -12,7 +12,7 @@ public class HomePage extends Utilities {
     WebElement btnCloseNewsLetter;
     @FindBy(id="q")
     WebElement txtSearchBox;
-    @FindBy(xpath="//button/span[@class='icon-search']")
+    @FindBy(xpath="//button[@class='c16__button icon']/span[@class='icon-search']")
     WebElement iconSearch;
     @FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']")
     WebElement btnOnCookieAlert;
@@ -38,6 +38,10 @@ public class HomePage extends Utilities {
         iconSearch.click();
     }
     public void enterSearchText(String searchText){
-        txtSearchBox.sendKeys(searchText);
+        if(txtSearchBox.isDisplayed()){
+          txtSearchBox.click();
+          txtSearchBox.sendKeys(searchText);
+        }
+
     }
 }

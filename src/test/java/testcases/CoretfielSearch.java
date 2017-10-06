@@ -49,9 +49,10 @@ public class CoretfielSearch {
     @Test
     public void testCortefielSearch(){
         driver.get(sURL);
+        driver.manage().window().maximize();
         HomePage homePage = new HomePage(driver);
         homePage.clickOnbtnCloseNewsLetter();
-        homePage.clickOnCookieAlert();
+      homePage.clickOnCookieAlert();
         homePage.clickOnSearchIcon();
         homePage.enterSearchText("abc");
 
