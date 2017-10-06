@@ -14,7 +14,8 @@ public class HomePage extends Utilities {
     WebElement txtSearchBox;
     @FindBy(xpath="//button/span[@class='icon-search']")
     WebElement iconSearch;
-
+    @FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']")
+    WebElement btnOnCookieAlert;
 
 
     public HomePage(WebDriver driver) {
@@ -26,6 +27,11 @@ public class HomePage extends Utilities {
     public void clickOnbtnCloseNewsLetter(){
         btnCloseNewsLetter.click();
 
+    }
+    public void clickOnCookieAlert(){
+        if(btnOnCookieAlert.isDisplayed()){
+            btnOnCookieAlert.click();
+        }
     }
     public void clickOnSearchIcon(){
         iconSearch.click();

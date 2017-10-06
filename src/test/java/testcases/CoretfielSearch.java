@@ -51,6 +51,8 @@ public class CoretfielSearch {
         driver.get(sURL);
         HomePage homePage = new HomePage(driver);
         homePage.clickOnbtnCloseNewsLetter();
+        homePage.clickOnCookieAlert();
+        homePage.clickOnSearchIcon();
         homePage.enterSearchText("abc");
 
     }
