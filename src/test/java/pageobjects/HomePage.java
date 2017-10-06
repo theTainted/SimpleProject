@@ -1,5 +1,6 @@
 package pageobjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ public class HomePage extends Utilities {
 
     @FindBy(xpath = "//button/span[@class='ui-button-icon-primary ui-icon ui-icon-closethick']")
     WebElement btnCloseNewsLetter;
-    @FindBy(id="q")
+    @FindBy(xpath="//input[@type='search']")
     WebElement txtSearchBox;
     @FindBy(xpath="//button[@class='c16__button icon']/span[@class='icon-search']")
     WebElement iconSearch;
@@ -37,10 +38,16 @@ public class HomePage extends Utilities {
     public void clickOnSearchIcon(){
         iconSearch.click();
     }
-    public void enterSearchText(String searchText){
+    public void enterSearchTextAndSearch(String searchText){
         if(txtSearchBox.isDisplayed()){
+
           txtSearchBox.click();
+          txtSearchBox.clear();
           txtSearchBox.sendKeys(searchText);
+          txtSearchBox.sendKeys(Keys.RETURN);
+        }
+        else {
+            System.out.println("Whats wrong");
         }
 
     }

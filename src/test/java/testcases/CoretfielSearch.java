@@ -54,7 +54,7 @@ public class CoretfielSearch {
         homePage.clickOnbtnCloseNewsLetter();
       homePage.clickOnCookieAlert();
         homePage.clickOnSearchIcon();
-        homePage.enterSearchText("abc");
+        homePage.enterSearchTextAndSearch("13223971004");
 
     }
 }
