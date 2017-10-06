@@ -10,7 +10,8 @@ public class HomePage extends Utilities {
 
     @FindBy(xpath = "//button/span[@class='ui-button-icon-primary ui-icon ui-icon-closethick']")
     WebElement btnCloseNewsLetter;
-
+    @FindBy(id="q")
+    WebElement txtSearchBox;
 
     public HomePage(WebDriver driver) {
 
@@ -21,5 +22,8 @@ public class HomePage extends Utilities {
     public void clickOnbtnCloseNewsLetter(){
         btnCloseNewsLetter.click();
 
+    }
+    public void enterSearchText(String searchText){
+        txtSearchBox.sendKeys(searchText);
     }
 }
