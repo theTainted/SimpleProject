@@ -11,8 +11,10 @@
     <test name="TestChrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="testcases.TrialTestClass"/>
-        <!--    <class name="testcases.TrialSecondClass"></class> -->
+            <class name ="testcases.Screenshot"></class>
+            <!--
+           <class name="testcases.TrialTestClass"/>
+         <class name="testcases.TrialSecondClass"></class> -->
         </classes>
     </test>
 </suite>
