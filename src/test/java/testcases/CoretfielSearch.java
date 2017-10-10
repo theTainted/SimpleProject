@@ -25,7 +25,7 @@ public class CoretfielSearch {
         {
             System.setProperty("webdriver.chrome.driver", "C:/BrowserUtilities/chromedriver.exe");
             driver = new ChromeDriver();
-            System.out.println("inside the general");
+
 
         } else if (browser.equalsIgnoreCase("IE"))
 
