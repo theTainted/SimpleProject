@@ -25,7 +25,7 @@ public class HomePage extends Utilities {
     WebElement btnOnCookieAlert;
     @FindBy(xpath="//h1/span[@class='c11__title']")
     WebElement titleSearchResults;
-    private final static Logger LOGGER = Logger.getLogger(HomePage.class.getName());
+
 
     public HomePage(WebDriver driver) {
 
@@ -55,6 +55,7 @@ public class HomePage extends Utilities {
           txtSearchBox.sendKeys(Keys.RETURN);
           softAssert.assertTrue(searchText.equals(titleSearchResults.getAttribute("data-search-q")));
           softAssert.assertAll();
+
 
         }
         else {
