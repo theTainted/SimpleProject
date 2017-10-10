@@ -7,7 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+
+
 public class HomePage extends Utilities {
+
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
@@ -54,7 +57,7 @@ public class HomePage extends Utilities {
 
         }
         else {
-            System.out.println("Whats wrong");
+            System.out.println("need to replace this with a logger");
         }
 
     }
