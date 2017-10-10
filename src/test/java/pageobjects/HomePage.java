@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
+import java.util.logging.Logger;
 
 
 public class HomePage extends Utilities {
@@ -24,7 +25,7 @@ public class HomePage extends Utilities {
     WebElement btnOnCookieAlert;
     @FindBy(xpath="//h1/span[@class='c11__title']")
     WebElement titleSearchResults;
-
+    private final static Logger LOGGER = Logger.getLogger(HomePage.class.getName());
 
     public HomePage(WebDriver driver) {
 
@@ -58,6 +59,7 @@ public class HomePage extends Utilities {
         }
         else {
             System.out.println("need to replace this with a logger");
+
         }
 
     }
