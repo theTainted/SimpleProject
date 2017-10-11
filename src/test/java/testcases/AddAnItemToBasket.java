@@ -1,6 +1,8 @@
 package testcases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -8,6 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.HomePage;
+
+import java.util.List;
 
 public class AddAnItemToBasket {
     public static WebDriver driver; // changed to static
@@ -47,7 +51,7 @@ public class AddAnItemToBasket {
     }
 
     @Test
-    public void testAddAnItemToBasket() {
+    public void testAddAnItemToBasket() throws InterruptedException {
         driver.get(sURL);
         driver.manage().window().maximize();
         HomePage homePage = new HomePage(driver);
@@ -55,6 +59,13 @@ public class AddAnItemToBasket {
         homePage.clickOnCookieAlert();
         homePage.clickOnSearchIcon();
         homePage.enterSearchTextAndSearch("13223971004");
+        Thread.sleep(5000);
+         List<WebElement> size =driver.findElements(By.xpath("//div[@id='product-content']//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']"));
+        System.out.println(size.size());
+
+
+
+
 
     }
 
