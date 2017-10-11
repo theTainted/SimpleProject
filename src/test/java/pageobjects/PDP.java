@@ -13,7 +13,7 @@ public class PDP extends Utilities{
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
-    @FindBys(@FindBy(xpath="//div[@id='product-content']/ul[@class='swatches c02__size-list size-list']/li"))
+    @FindBys(@FindBy(xpath="//div[@id='product-content']//ul[@class='swatches c02__size-list size-list']/li"))
      public   List<WebElement> sizes;
 
 
