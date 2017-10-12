@@ -15,6 +15,8 @@ public class PDP extends Utilities{
 
     @FindBys(@FindBy(xpath="//div[@id='product-content']//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']//a"))
      public   List<WebElement> sizePresent;
+    @FindBy(id="add-to-cart")
+    public WebElement btnAddToBasket;
 
 
 
@@ -23,7 +25,6 @@ public class PDP extends Utilities{
         // Utilities.driver=driver; //-> added after making the driver static
         PageFactory.initElements(driver,this);
     }
-
     public void clickOnFirstAvailableSize(){
         for (int i=0;i<sizePresent.size();i++){
 
@@ -37,5 +38,8 @@ public class PDP extends Utilities{
             }
 
         }
+    }
+    public void clickAddToBasketButton(){
+        btnAddToBasket.click();
     }
 }
