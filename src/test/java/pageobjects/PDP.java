@@ -13,8 +13,8 @@ public class PDP extends Utilities{
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
-    @FindBys(@FindBy(xpath="//div[@id='product-content']//ul[@class='swatches c02__size-list size-list']/li"))
-     public   List<WebElement> sizes;
+    @FindBys(@FindBy(xpath="//div[@id='product-content']//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']//a"))
+     public   List<WebElement> sizePresent;
 
 
 
@@ -22,5 +22,20 @@ public class PDP extends Utilities{
 
         // Utilities.driver=driver; //-> added after making the driver static
         PageFactory.initElements(driver,this);
+    }
+
+    public void clickOnFirstAvailableSize(){
+        for (int i=0;i<sizePresent.size();i++){
+
+            String size =sizePresent.get(i).getText();
+            String titleSize =sizePresent.get(i).getAttribute("title");
+            if(titleSize.toLowerCase().indexOf("not available") == -1){
+
+                sizePresent.get(i).click();
+                System.out.println(sizePresent.get(i).getText());
+                break;
+            }
+
+        }
     }
 }
