@@ -39,7 +39,7 @@ public class HomePage extends Utilities {
     }
     public void clickOnCookieAlert(){
         if(btnOnCookieAlert.isDisplayed()){
-            System.out.println("in here");
+
             btnOnCookieAlert.click();
         }
     }
