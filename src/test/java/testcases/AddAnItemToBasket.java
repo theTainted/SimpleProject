@@ -60,9 +60,8 @@ public class AddAnItemToBasket {
         homePage.clickOnSearchIcon();
         homePage.enterSearchTextAndSearch("13223971004");
         Thread.sleep(5000);
-         List<WebElement> size =driver.findElements(By.xpath("//div[@id='product-content']//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']"));
+         List<WebElement> size =driver.findElements(By.xpath("//div[@id='product-content']//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']//a"));
         System.out.println(size.size());
-
 
 
 
