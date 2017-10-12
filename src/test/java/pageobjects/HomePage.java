@@ -53,10 +53,10 @@ public class HomePage extends Utilities {
           txtSearchBox.clear();
           txtSearchBox.sendKeys(searchText);
           txtSearchBox.sendKeys(Keys.RETURN);
-          if(titleSearchResults.isDisplayed()) {
+      /*    if(titleSearchResults.isDisplayed()) {
               softAssert.assertTrue(searchText.equals(titleSearchResults.getAttribute("data-search-q")));
               softAssert.assertAll();
-          }
+          }*/
 
 
         }
