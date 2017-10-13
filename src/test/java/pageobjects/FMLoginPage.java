@@ -12,6 +12,8 @@ public class FMLoginPage {
 
     @FindBy(id="email")
     WebElement txtBoxLogin;
+    @FindBy(id="password")
+    WebElement txtBoxPassword;
 
 
     public FMLoginPage(WebDriver driver){
@@ -20,5 +22,8 @@ public class FMLoginPage {
 
     public void enterLogin(String sEmail){
         txtBoxLogin.sendKeys(sEmail);
+    }
+    public void enterPassword(String sPassword){
+        txtBoxLogin.sendKeys(sPassword);
     }
 }
