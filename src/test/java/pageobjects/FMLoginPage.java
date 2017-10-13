@@ -14,6 +14,10 @@ public class FMLoginPage {
     WebElement txtBoxLogin;
     @FindBy(id="password")
     WebElement txtBoxPassword;
+    @FindBy(xpath="//div[@class='login_links_wrapper']/input[@class='btn btn--login btn-login']")
+    WebElement btnLogin;
+
+
 
 
     public FMLoginPage(WebDriver driver){
@@ -25,5 +29,8 @@ public class FMLoginPage {
     }
     public void enterPassword(String sPassword){
         txtBoxPassword.sendKeys(sPassword);
+    }
+    public void clickLoginButton(){
+        btnLogin.click();
     }
 }
