@@ -1,6 +1,8 @@
 package testcases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -8,6 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.FMLoginPage;
+
+import java.util.List;
 
 public class FMLogin {
     public static WebDriver driver; // changed to static
@@ -53,6 +57,9 @@ public class FMLogin {
         FMLoginPage fmloginpage = new FMLoginPage(driver);
         fmloginpage.enterLogin("mobilexl@fleurametz.com");
         fmloginpage.enterPassword("lelie");
+        fmloginpage.clickLoginButton();
+
+
     }
 
 
