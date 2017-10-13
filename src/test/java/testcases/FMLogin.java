@@ -48,6 +48,7 @@ public class FMLogin {
     @Test
     public void testFMLogin(){
         driver.get(sURL);
+        driver.manage().window().maximize();
     }
 
 
