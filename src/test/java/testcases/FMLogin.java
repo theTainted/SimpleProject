@@ -6,10 +6,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class FMLogin {
     public static WebDriver driver; // changed to static
-    public String sURL = "https://" + "storefront" + ":" + "storefront" + "@" + "staging.cortefiel.com/es/es";
+    public String sURL = "https://t2.fleurametz.com";
 
 
     @BeforeClass
@@ -43,5 +44,11 @@ public class FMLogin {
 
         }
     }
+
+    @Test
+    public void testFMLogin(){
+        driver.get(sURL);
+    }
+
 
 }

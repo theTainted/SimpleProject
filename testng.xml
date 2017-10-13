@@ -11,8 +11,9 @@
     <test name="TestChrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
-       <!--     <class name="testcases.CoretfielSearch"></class> -->
-            <class name = "testcases.AddAnItemToBasket"></class>
+       <!--     <class name="testcases.CoretfielSearch"></class>
+            <class name = "testcases.AddAnItemToBasket"></class>-->
+            <class name ="testcases.FMLogin"></class>
             <!--
            <class name ="testcases.Screenshot"></class>
            <class name="testcases.TrialTestClass"/>
