@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class FMLogin {
     public static WebDriver driver; // changed to static
-    public String sURL = "https://t2.fleurametz.com";
+    public String sURL = "http://t2.fleurametz.com";
 
 
     @BeforeClass
