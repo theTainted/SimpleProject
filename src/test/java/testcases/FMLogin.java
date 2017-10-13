@@ -7,6 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageobjects.FMLoginPage;
 
 public class FMLogin {
     public static WebDriver driver; // changed to static
@@ -49,6 +50,9 @@ public class FMLogin {
     public void testFMLogin(){
         driver.get(sURL);
         driver.manage().window().maximize();
+        FMLoginPage fmloginpage = new FMLoginPage(driver);
+        fmloginpage.enterLogin("mobilexl@fleurametz.com");
+        fmloginpage.enterPassword("lelie");
     }
 
 
