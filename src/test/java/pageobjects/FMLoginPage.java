@@ -24,6 +24,6 @@ public class FMLoginPage {
         txtBoxLogin.sendKeys(sEmail);
     }
     public void enterPassword(String sPassword){
-        txtBoxLogin.sendKeys(sPassword);
+        txtBoxPassword.sendKeys(sPassword);
     }
 }
