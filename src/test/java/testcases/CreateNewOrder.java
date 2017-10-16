@@ -1,5 +1,6 @@
 package testcases;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -66,10 +67,10 @@ public class CreateNewOrder {
 
         List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
         for (WebElement test :possibleDeliveryDatesWithNoOrders) {
-            System.out.println(("Test:"+ test.getText()));
+        //    System.out.println(("Test:"+ test.getText()));
 
             Date date = new Date();
-            System.out.println(date);
+         //   System.out.println(date);
 
             if (test.getText().equalsIgnoreCase("20")) {
                 test.click();
@@ -79,12 +80,18 @@ public class CreateNewOrder {
 
 
         }
-      driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
+Thread.sleep(2000);
+        if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected()==true){
+        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
 
+     }
+        else {
+        System.out.println(driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Open order']")).isSelected());
+     }
     }
 }
 
-
+//*[@id="start-new-order-calendar"]//button/span
 
 
 
