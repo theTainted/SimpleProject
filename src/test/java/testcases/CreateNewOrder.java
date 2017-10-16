@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.FMLoginPage;
 
+import java.util.Date;
 import java.util.List;
 
 public class CreateNewOrder {
@@ -50,7 +51,7 @@ public class CreateNewOrder {
     }
 
     @Test
-    public void testCreateNewOrder(){
+    public void testCreateNewOrder() throws InterruptedException {
         driver.get(sURL);
         driver.manage().window().maximize();
         FMLoginPage fmloginpage = new FMLoginPage(driver);
@@ -58,10 +59,32 @@ public class CreateNewOrder {
         fmloginpage.enterPassword("lelie");
         fmloginpage.clickLoginButton();
 
+        List<WebElement> deliveryDateHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']/div/form//td[@class='delivery-order has-order']/a"));
+
+        Thread.sleep(2000);
+        List<WebElement> deliveryDateTodayHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery-order active has-order today']"));
+
+        List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
+        for (WebElement test :possibleDeliveryDatesWithNoOrders) {
+            System.out.println(("Test:"+ test.getText()));
+
+            Date date = new Date();
+            System.out.println(date);
+
+            if (test.getText().equalsIgnoreCase("20")) {
+                test.click();
+                break;
+            }
+
+
+
+        }
+      driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
 
     }
-
-
 }
+
+
+
 
 
