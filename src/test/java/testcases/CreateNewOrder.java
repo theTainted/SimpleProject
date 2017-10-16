@@ -72,7 +72,7 @@ public class CreateNewOrder {
             Date date = new Date();
          //   System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("20")) {
+            if (test.getText().equalsIgnoreCase("17")) {
                 test.click();
                 break;
             }
@@ -81,17 +81,20 @@ public class CreateNewOrder {
 
         }
 Thread.sleep(2000);
-        if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected()==true){
+  /*      if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected()==true){
+            System.out.println("in here");
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
 
      }
         else {
-        System.out.println(driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Open order']")).isSelected());
-     }
+       driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected();
+     }*/
+
+        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
     }
 }
 
-//*[@id="start-new-order-calendar"]//button/span
+
 
 
 
