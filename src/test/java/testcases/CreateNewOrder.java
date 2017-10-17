@@ -81,16 +81,17 @@ public class CreateNewOrder {
 
         }
 Thread.sleep(2000);
-  /*      if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected()==true){
+      if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isDisplayed()==true){
             System.out.println("in here");
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
 
      }
-        else {
-       driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isSelected();
-     }*/
+        else if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).isDisplayed()==true){
+        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).click();
+     }
 
-        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
+
+
     }
 }
 
