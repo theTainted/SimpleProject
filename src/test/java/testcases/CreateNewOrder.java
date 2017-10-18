@@ -87,6 +87,7 @@ Thread.sleep(2000);
 
      }
         else if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).isDisplayed()==true){
+          System.out.println("in heres");
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).click();
      }
 
