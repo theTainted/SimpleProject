@@ -72,7 +72,7 @@ public class CreateNewOrder {
             Date date = new Date();
          //   System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("17")) {
+            if (test.getText().equalsIgnoreCase("18")) {
                 test.click();
                 break;
             }
