@@ -67,29 +67,29 @@ public class CreateNewOrder {
 
         List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
         for (WebElement test :possibleDeliveryDatesWithNoOrders) {
-        //    System.out.println(("Test:"+ test.getText()));
+           System.out.println(("Test:"+ test.getText()));
 
             Date date = new Date();
-         //   System.out.println(date);
+           System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("18")) {
+            if (test.getText().equalsIgnoreCase("23")) {
+             System.out.println("why here ");
                 test.click();
-                break;
-            }
 
+            }
+            break;
 
 
         }
-Thread.sleep(2000);
+/*Thread.sleep(2000);
       if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isDisplayed()==true){
             System.out.println("in here");
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
 
      }
-        else if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).isDisplayed()==true){
-          System.out.println("in heres");
-        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate ='OrderActions.OpenOrder']")).click();
-     }
+        else{
+        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Open'")).click();
+     }*/
 
 
 
