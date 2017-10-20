@@ -73,7 +73,7 @@ public class CreateNewOrder {
             Date date = new Date();
            System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("25")) {
+            if (test.getText().equalsIgnoreCase("26")) {
              System.out.println("why here ");
                 test.click();
                 break;
@@ -82,7 +82,7 @@ public class CreateNewOrder {
 
 
         }
-        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
+        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate='OrderActions.CreateNewOrder')]")).click();
 /*Thread.sleep(2000);
       if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isDisplayed()==true){
             System.out.println("in here");
