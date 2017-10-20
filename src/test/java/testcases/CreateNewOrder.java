@@ -69,9 +69,15 @@ public class CreateNewOrder {
 
 
 
+driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='login-iframe']")));
+int size=  driver.findElements(By.xpath("//div[@class='variant-search']")).size();
+System.out.println(size);
+List <WebElement> whatever = driver.findElements(By.xpath("//input[@class='text btn-inline variant-search__input']"));
+for (WebElement s:whatever){
+    System.out.println(s.getText());
+}
 
-  /*   driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).click();
-        driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");*/
+      //  driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");
 
     }
 }
