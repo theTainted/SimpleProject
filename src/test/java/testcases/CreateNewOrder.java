@@ -67,6 +67,12 @@ public class CreateNewOrder {
         fmDashboard.clickOnAnAvailableDateInTheCalendar("26");
         fmDashboard.clickOnOrderButton("Open order");
 
+
+
+
+     driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).click();
+        driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");
+
     }
 }
 
