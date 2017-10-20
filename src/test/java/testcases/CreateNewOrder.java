@@ -62,35 +62,13 @@ public class CreateNewOrder {
         fmloginpage.enterPassword("lelie");
         fmloginpage.clickLoginButton();
 
-        List<WebElement> deliveryDateHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']/div/form//td[@class='delivery-order has-order']/a"));
-
-        Thread.sleep(2000);
-        List<WebElement> deliveryDateTodayHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery-order active has-order today']"));
-
-        List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
-        for (WebElement test :possibleDeliveryDatesWithNoOrders) {
-         //  System.out.println(("Test:"+ test.getText()));
-
-            Date date = new Date();
-          // System.out.println(date);
-
-            if (test.getText().equalsIgnoreCase("25")) {
-
-                test.click();
-                break;
-            }
-
-
-
-        }
         Thread.sleep(2000);
         FMDashboard fmDashboard = new FMDashboard(driver);
-        fmDashboard.clickOnOrderButton("Create new order");
+        fmDashboard.clickOnAnAvailableDateInTheCalendar("26");
+        fmDashboard.clickOnOrderButton("Open order");
 
-
-
-
-
+    }
+}
 
 
 
@@ -123,12 +101,30 @@ public class CreateNewOrder {
      }
         else{
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Open'")).click();
-     }*/
+
+         List<WebElement> deliveryDateHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']/div/form//td[@class='delivery-order has-order']/a"));
+     }
+
+ List<WebElement> deliveryDateTodayHasOrder = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery-order active has-order today']"));
+
+        List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
+        for (WebElement test : possibleDeliveryDatesWithNoOrders) {
+            //  System.out.println(("Test:"+ test.getText()));
+
+            Date date = new Date();
+            // System.out.println(date);
+
+            if (test.getText().equalsIgnoreCase("26")) {
+
+                test.click();
+                break;
+            }
 
 
+        }
 
     }
-}
+}*/
 
 
 
