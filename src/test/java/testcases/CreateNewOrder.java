@@ -70,8 +70,8 @@ public class CreateNewOrder {
 
 
 
-     driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).click();
-        driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");
+  /*   driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).click();
+        driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");*/
 
     }
 }
