@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageobjects.FMDashboard;
 import pageobjects.FMLoginPage;
 import pageobjects.Utilities;
 
@@ -68,13 +69,13 @@ public class CreateNewOrder {
 
         List<WebElement> possibleDeliveryDatesWithNoOrders = driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"));
         for (WebElement test :possibleDeliveryDatesWithNoOrders) {
-           System.out.println(("Test:"+ test.getText()));
+         //  System.out.println(("Test:"+ test.getText()));
 
             Date date = new Date();
-           System.out.println(date);
+          // System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("26")) {
-             System.out.println("why here ");
+            if (test.getText().equalsIgnoreCase("25")) {
+
                 test.click();
                 break;
             }
@@ -82,8 +83,39 @@ public class CreateNewOrder {
 
 
         }
-        driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[@data-translate='OrderActions.CreateNewOrder')]")).click();
-/*Thread.sleep(2000);
+        Thread.sleep(2000);
+        FMDashboard fmDashboard = new FMDashboard(driver);
+        fmDashboard.clickOnOrderButton("Create new order");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*     int Size =  driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//button//span[@data-translate]")).size();
+      System.out.println(Size);
+
+     List <WebElement> createNewOrder=driver.findElements(By.xpath("//div[@id='start-new-order-calendar']//button//span[@data-translate='OrderActions.CreateNewOrder']"));
+
+     for (WebElement newOrder : createNewOrder){
+         System.out.println(newOrder.getText());
+         if(newOrder.getText().equalsIgnoreCase("Create new order")){
+             newOrder.click();
+         }
+
+     }*/
+/*;
       if (driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).isDisplayed()==true){
             System.out.println("in here");
         driver.findElement(By.xpath("//div[@id='start-new-order-calendar']//span[contains(text(),'Start nieuwe order')]")).click();
