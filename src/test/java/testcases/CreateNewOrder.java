@@ -10,14 +10,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.FMLoginPage;
+import pageobjects.Utilities;
 
 import java.util.Date;
 import java.util.List;
 
 public class CreateNewOrder {
     public static WebDriver driver; // changed to static
-    public String sURL = "http://t2.fleurametz.com";
-
+  //  public String sURL = "http://t2.fleurametz.com";
+    Utilities utilities = new Utilities();
 
     @BeforeClass
     @Parameters("browser")
@@ -53,7 +54,7 @@ public class CreateNewOrder {
 
     @Test
     public void testCreateNewOrder() throws InterruptedException {
-        driver.get(sURL);
+        driver.get(utilities.sUrl);
         driver.manage().window().maximize();
         FMLoginPage fmloginpage = new FMLoginPage(driver);
         fmloginpage.enterLogin("mobilexl@fleurametz.com");
@@ -72,7 +73,7 @@ public class CreateNewOrder {
             Date date = new Date();
            System.out.println(date);
 
-            if (test.getText().equalsIgnoreCase("24")) {
+            if (test.getText().equalsIgnoreCase("25")) {
              System.out.println("why here ");
                 test.click();
                 break;

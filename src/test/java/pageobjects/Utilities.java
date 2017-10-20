@@ -46,6 +46,6 @@ public class Utilities {
         }
 
     }*/
-
+    public String sUrl= "http://t1.fleurametz.com";
 
 }

@@ -10,13 +10,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.FMLoginPage;
+import pageobjects.Utilities;
 
 import java.util.List;
 
 public class FMLogin {
     public static WebDriver driver; // changed to static
-    public String sURL = "http://t2.fleurametz.com";
-
+   // public String sURL = "http://t2.fleurametz.com";
+    Utilities utilities = new Utilities();
 
     @BeforeClass
     @Parameters("browser")
@@ -52,7 +53,7 @@ public class FMLogin {
 
     @Test
     public void testFMLogin(){
-        driver.get(sURL);
+        driver.get(utilities.sUrl);
         driver.manage().window().maximize();
         FMLoginPage fmloginpage = new FMLoginPage(driver);
         fmloginpage.enterLogin("mobilexl@fleurametz.com");
