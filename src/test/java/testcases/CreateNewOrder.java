@@ -70,7 +70,7 @@ public class CreateNewOrder {
 
 
         FMPLP fmplp = new FMPLP(driver);
-        fmplp.enterSearchText("waqas",driver);
+        fmplp.enterSearchText("rosa",driver);
 
 
 
