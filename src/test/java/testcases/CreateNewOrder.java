@@ -66,7 +66,7 @@ public class CreateNewOrder {
 
         Thread.sleep(5000);
         FMDashboard fmDashboard = new FMDashboard(driver);
-        fmDashboard.clickOnAnAvailableDateInTheCalendar("26");
+        fmDashboard.clickOnAnAvailableDateInTheCalendar("25");
         fmDashboard.clickOnOrderButton("Open order");
 
 
