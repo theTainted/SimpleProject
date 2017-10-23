@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -70,10 +71,18 @@ public class CreateNewOrder {
 
 
         FMPLP fmplp = new FMPLP(driver);
-        fmplp.enterSearchText("rosa",driver);
+        fmplp.enterSearchText("rosa", driver);
+        List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
+        for (WebElement quantity : tBody) {
+            Actions actions = new Actions(driver);
+            actions.moveToElement(quantity);
+            actions.click();
+            actions.sendKeys("2");
+            actions.build().perform();
+        }
+
     }
 }
-
 
 
 
