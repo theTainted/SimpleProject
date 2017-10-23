@@ -17,7 +17,8 @@ public class FMPLP {
 @FindBy(xpath="//form[@class='variant-search__form']//fieldset/div[@class='field']//input[@class='text btn-inline variant-search__input']")
     WebElement txtBoxSearch;
 
-
+@FindBy(xpath="//form[@class='variant-search__form']//fieldset/div[@class='field']//button[@class='button btn-search variant-search__submit']")
+    WebElement btnSearch;
 
     public FMPLP(WebDriver driver){
         PageFactory.initElements(driver,this);
@@ -32,4 +33,7 @@ public class FMPLP {
 
     }
 
+    public void clickSearchButton(){
+        btnSearch.click();
+    }
 }
