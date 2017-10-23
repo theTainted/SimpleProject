@@ -39,7 +39,7 @@ public class FMDashboard {
 
     public void clickOnOrderButton(String sOrderButtonLabel) {
         for (WebElement newOrder : createNewOrder) {
-            System.out.println(newOrder.getText());
+            //System.out.println(newOrder.getText());
             if (newOrder.getText().equalsIgnoreCase(sOrderButtonLabel)) {
                // System.out.println("clickOnOrderButton");
                 newOrder.click();
