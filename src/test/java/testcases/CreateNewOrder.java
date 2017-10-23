@@ -73,11 +73,14 @@ public class CreateNewOrder {
         FMPLP fmplp = new FMPLP(driver);
         fmplp.enterSearchText("rosa", driver);
         List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
+        int i=0;
+        System.out.println(i);
         for (WebElement quantity : tBody) {
+            System.out.println("Countrer :"+ i++);
             Actions actions = new Actions(driver);
             actions.moveToElement(quantity);
             actions.click();
-            actions.sendKeys("2");
+            actions.sendKeys("6");
             actions.build().perform();
         }
 
