@@ -20,6 +20,8 @@ public class FMPLP {
 @FindBy(xpath="//form[@class='variant-search__form']//fieldset/div[@class='field']//button[@class='button btn-search variant-search__submit']")
     WebElement btnSearch;
 
+@FindBy(xpath="//div[@class='filter-sticky__filters']/a[@class='filter-sticky__link']/span[@class='filter-sticky__link-text']")
+    WebElement stickyFilterText;
     public FMPLP(WebDriver driver){
         PageFactory.initElements(driver,this);
 
@@ -29,6 +31,10 @@ public class FMPLP {
         WebDriverWait wait = new WebDriverWait(driver,15);
         wait.until(ExpectedConditions.elementToBeClickable(txtBoxSearch));
         txtBoxSearch.sendKeys(sSearchText);
+        clickSearchButton();
+       String sFilterText=stickyFilterText.getText();
+        softAssert.assertTrue(sFilterText.equalsIgnoreCase(sSearchText),"the sticky filter text and search crteria donot match");
+        softAssert.assertAll();
 
 
     }
@@ -37,3 +43,4 @@ public class FMPLP {
         btnSearch.click();
     }
 }
+//div[@class='filter-sticky__filters']/a[@class='filter-sticky__link']/span[@class='filter-sticky__link-text']
