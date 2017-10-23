@@ -11,6 +11,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.FMDashboard;
 import pageobjects.FMLoginPage;
+import pageobjects.FMPLP;
 import pageobjects.Utilities;
 
 import java.util.Date;
@@ -62,22 +63,16 @@ public class CreateNewOrder {
         fmloginpage.enterPassword("lelie");
         fmloginpage.clickLoginButton();
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         FMDashboard fmDashboard = new FMDashboard(driver);
         fmDashboard.clickOnAnAvailableDateInTheCalendar("26");
         fmDashboard.clickOnOrderButton("Open order");
 
+        Thread.sleep(5000);
+        FMPLP fmplp = new FMPLP(driver);
+        fmplp.enterSearchText("himanshu",driver);
 
-/*
-driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='login-iframe']")));
-int size=  driver.findElements(By.xpath("//div[@class='variant-search']")).size();
-System.out.println(size);
-List <WebElement> whatever = driver.findElements(By.xpath("//input[@class='text btn-inline variant-search__input']"));
-for (WebElement s:whatever){
-    System.out.println(s.getText());
-}*/
 
-      //  driver.findElement(By.xpath("//div[@class='field']/input[@class='text btn-inline variant-search__input']")).sendKeys("rosa");
 
     }
 }
@@ -139,6 +134,22 @@ for (WebElement s:whatever){
 }*/
 
 
+/*   int x = driver.findElements(By.xpath("//form[@class='variant-search__form']//fieldset/div[@class='field']//input[@class='text btn-inline variant-search__input']")).size();
+   System.out.println(x);
+        driver.findElement(By.xpath("//form[@class='variant-search__form']//fieldset/div[@class='field']//input[@class='text btn-inline variant-search__input']")).sendKeys("test");
+ List <WebElement> searchBox = driver.findElements(By.xpath("//form[@class='variant-search__form']//fieldset/div[@class='field']"));
+ for (WebElement y :searchBox){
+     System.out.println(y.getText());
+ }*/
 
 
+/*
+driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='login-iframe']")));
+int size=  driver.findElements(By.xpath("//div[@class='variant-search']")).size();
+System.out.println(size);
+List <WebElement> whatever = driver.findElements(By.xpath("//input[@class='text btn-inline variant-search__input']"));
+for (WebElement s:whatever){
+    System.out.println(s.getText());
+}*/
 
+//form[@class='variant-search__form']/fieldset/div/input
