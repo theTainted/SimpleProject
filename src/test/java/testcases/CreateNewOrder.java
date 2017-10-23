@@ -68,7 +68,7 @@ public class CreateNewOrder {
         fmDashboard.clickOnAnAvailableDateInTheCalendar("26");
         fmDashboard.clickOnOrderButton("Open order");
 
-        Thread.sleep(5000);
+      //  Thread.sleep(5000);
         FMPLP fmplp = new FMPLP(driver);
         fmplp.enterSearchText("himanshu",driver);
 
