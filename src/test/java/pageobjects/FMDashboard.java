@@ -15,7 +15,8 @@ public class FMDashboard {
     SoftAssert softAssert = new SoftAssert();
     Utilities utilities = new Utilities();
 
-    @FindBys(@FindBy(xpath="//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"))
+  //  @FindBys(@FindBy(xpath="//div[@id='start-new-order-calendar']//form//table//a[@class='order-day-link']")) ->this gives all the dates in the calendar
+  @FindBys(@FindBy(xpath="//div[@id='start-new-order-calendar']//form//table//td[@class='delivery']//a[@class='order-day-link']"))
     List<WebElement> possibleDeliveryDatesWithNoOrders;
 
     @FindBys(@FindBy(xpath ="//div[@id='start-new-order-calendar']//button//span[@data-translate]"))
@@ -29,7 +30,8 @@ public class FMDashboard {
     public void clickOnAnAvailableDateInTheCalendar(String sDate) {
         for (WebElement test : possibleDeliveryDatesWithNoOrders) {
             Date date = new Date();
-
+      //      System.out.println(test.getText());
+        //    System.out.println(test.getAttribute("data-orderid"));
             if (test.getText().equalsIgnoreCase(sDate)) {
                 System.out.println("clickOnAnAvailableDateInTheCalendar : in here ");
                 test.click();
