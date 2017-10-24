@@ -66,13 +66,14 @@ public class CreateNewOrder {
 
         Thread.sleep(5000);
         FMDashboard fmDashboard = new FMDashboard(driver);
-        fmDashboard.clickOnAnAvailableDateInTheCalendar("25");
+        fmDashboard.clickOnAnAvailableDateInTheCalendar("27");
         fmDashboard.clickOnOrderButton("Open order");
 
 
         FMPLP fmplp = new FMPLP(driver);
         fmplp.enterSearchText("rosa", driver);
      List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
+     System.out.println(tBody.size());
         int i=0;
         System.out.println(i);
         for (WebElement quantity : tBody) {
