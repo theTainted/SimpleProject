@@ -69,15 +69,16 @@ public class CreateNewOrder {
         fmDashboard.clickOnAnAvailableDateInTheCalendar("27");
         fmDashboard.clickOnOrderButton("Open order");
         Thread.sleep(5000);
-     List <WebElement> activeOption= driver.findElements(By.xpath("//article[@role='article']//div[@class='pre-selected-menu']//a[@class='active']"));
-        System.out.println(activeOption.size());
+    /* List <WebElement> activeOption= driver.findElements(By.xpath("//article[@role='article']//div[@class='pre-selected-menu']//a[@class='active']"));
+        System.out.println(activeOption.size());*/
 
 
 
 
-  /*      FMPLP fmplp = new FMPLP(driver);
+     FMPLP fmplp = new FMPLP(driver);
         fmplp.enterSearchText("rosa", driver);
-     List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
+    // List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
+        List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class=' batch-first-item list']//tr//td[@class='tp-order']"));
      System.out.println(tBody.size());
         int i=0;
         System.out.println(i);
@@ -88,7 +89,7 @@ public class CreateNewOrder {
             actions.click();
             actions.sendKeys("6");
             actions.build().perform();
-        }*/
+        }
 
     }
 }
