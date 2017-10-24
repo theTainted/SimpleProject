@@ -79,7 +79,7 @@ public class CreateNewOrder {
         fmplp.enterSearchText("rosa", driver);
     // List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
    List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class=' batch-first-item list']//tr//td[@class='tp-order']"));
-
+     //   List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[conatins(@class,'list']//tr//td[@class='tp-order']"));
      System.out.println(tBody.size());
         int i=0;
         System.out.println(i);
