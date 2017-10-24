@@ -68,7 +68,7 @@ public class CreateNewOrder {
         FMDashboard fmDashboard = new FMDashboard(driver);
         fmDashboard.clickOnAnAvailableDateInTheCalendar("27");
         fmDashboard.clickOnOrderButton("Open order");
-
+        Thread.sleep(5000);
      List <WebElement> activeOption= driver.findElements(By.xpath("//article[@role='article']//div[@class='pre-selected-menu']//a[@class='active']"));
         System.out.println(activeOption.size());
 
