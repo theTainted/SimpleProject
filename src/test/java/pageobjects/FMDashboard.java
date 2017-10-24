@@ -40,7 +40,7 @@ public class FMDashboard {
         }
     }
 
-    public void clickOnOrderButton(String sOrderButtonLabel) {
+  public void clickOnOrderButton(String sOrderButtonLabel) {
         for (WebElement newOrder : createNewOrder) {
             //System.out.println(newOrder.getText());
             if (newOrder.getText().equalsIgnoreCase(sOrderButtonLabel)) {
@@ -48,6 +48,9 @@ public class FMDashboard {
                 newOrder.click();
                 break;
             }
+
         }
     }
+
+
 }
