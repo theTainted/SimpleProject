@@ -21,7 +21,7 @@ import java.util.List;
 
 public class CreateNewOrder {
     public static WebDriver driver; // changed to static
-  //  public String sURL = "http://t2.fleurametz.com";
+    //  public String sURL = "http://t2.fleurametz.com";
     Utilities utilities = new Utilities();
 
     @BeforeClass
@@ -72,7 +72,7 @@ public class CreateNewOrder {
         Thread.sleep(5000);
     /* List <WebElement> activeOption= driver.findElements(By.xpath("//article[@role='article']//div[@class='pre-selected-menu']//a[@class='active']"));
         System.out.println(activeOption.size());*/
-         FMPLP fmplp = new FMPLP(driver);
+        FMPLP fmplp = new FMPLP(driver);
         fmplp.enterSearchText("rosa", driver);
   /*
     // List<WebElement> tBody = driver.findElements(By.xpath("//table[@class='table-products']//tbody[@class='list']//tr//td[@class='tp-order']"));
@@ -88,13 +88,14 @@ public class CreateNewOrder {
             actions.click();
             actions.sendKeys("6");
             actions.build().perform();
-        }*/
+        }
 
     }
     @AfterClass
 
     public void tearDown(){
         driver.quit();
+    }*/
     }
 }
 
