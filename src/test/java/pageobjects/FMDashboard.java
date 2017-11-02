@@ -30,7 +30,7 @@ public class FMDashboard {
     public void clickOnAnAvailableDateInTheCalendar(String sDate) {
         for (WebElement test : possibleDeliveryDatesWithNoOrders) {
             Date date = new Date();
-      //      System.out.println(test.getText());
+          System.out.println(test.getText());
         //    System.out.println(test.getAttribute("data-orderid"));
             if (test.getText().equalsIgnoreCase(sDate)) {
                 System.out.println("clickOnAnAvailableDateInTheCalendar : in here ");
