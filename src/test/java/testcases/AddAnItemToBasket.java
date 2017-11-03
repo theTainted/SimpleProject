@@ -73,9 +73,10 @@ public class AddAnItemToBasket {
 
        PDP pdp = new PDP(driver);
        Thread.sleep(3000);
-        pdp.clickOnFirstAvailableSize();
-        Thread.sleep(1000);
-        pdp.clickAddToBasketButton();
+       pdp.clickOnFirstAvailableSize();
+       Thread.sleep(1000);
+       pdp.clickAddToBasketButton();
+
 
 
 
