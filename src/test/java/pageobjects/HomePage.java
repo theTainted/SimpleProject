@@ -4,10 +4,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
-import java.util.logging.Logger;
+import java.util.List;
 
 
 public class HomePage extends Utilities {
@@ -15,8 +16,8 @@ public class HomePage extends Utilities {
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
-    @FindBy(xpath = "//button/span[@class='ui-button-icon-primary ui-icon ui-icon-closethick']")
-    WebElement btnCloseNewsLetter;
+    @FindBys(@FindBy(xpath = "//button/span[@class='ui-button-icon-primary ui-icon ui-icon-closethick']"))
+    List<WebElement> btnCloseNewsLetter;
     @FindBy(xpath="//input[@type='search']")
     WebElement txtSearchBox;
     @FindBy(xpath="//button[@class='c16__button icon']/span[@class='icon-search']")
@@ -34,10 +35,9 @@ public class HomePage extends Utilities {
     }
 
     public void clickOnbtnCloseNewsLetter(){
-        if(btnCloseNewsLetter.isDisplayed()) {
-            btnCloseNewsLetter.click();
-        }
+
     }
+
     public void clickOnCookieAlert(){
         if(btnOnCookieAlert.isDisplayed()){
 
