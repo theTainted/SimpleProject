@@ -69,11 +69,12 @@ public class AddAnItemToBasket {
         Thread.sleep(5000);
         PLP plp = new PLP(driver);
         plp.clickOnTheFirstProductInPLP();
-       PDP pdp = new PDP(driver);
-       Thread.sleep(3000);
-       pdp.clickOnFirstAvailableSize();
-       Thread.sleep(1000);
-       pdp.clickAddToBasketButton();
+        PDP pdp = new PDP(driver);
+        Thread.sleep(3000);
+        pdp.clickOnFirstAvailableSize();
+        Thread.sleep(1000);
+        pdp.clickAddToBasketButton();
+
 
 
 
