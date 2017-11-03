@@ -34,8 +34,9 @@ public class HomePage extends Utilities {
     }
 
     public void clickOnbtnCloseNewsLetter(){
-        btnCloseNewsLetter.click();
-
+        if(btnCloseNewsLetter.isDisplayed()) {
+            btnCloseNewsLetter.click();
+        }
     }
     public void clickOnCookieAlert(){
         if(btnOnCookieAlert.isDisplayed()){
