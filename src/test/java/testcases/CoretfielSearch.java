@@ -59,9 +59,9 @@ public class CoretfielSearch {
         homePage.enterSearchTextAndSearch("rAincoat");
 
     }
-  @AfterClass
+  /*@AfterClass
     public void tearDown(){
         driver.quit();
-    }
+    }*/
 
 }
