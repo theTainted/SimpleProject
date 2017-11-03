@@ -27,11 +27,12 @@ public class PDP extends Utilities{
     }
     public void clickOnFirstAvailableSize(){
         String firstAvailableSize=sizePresent.get(0).getText();
-        System.out.println(firstAvailableSize);
+
         sizePresent.get(0).click();
 
     }
     public void clickAddToBasketButton(){
+        System.out.println(btnAddToBasket.isDisplayed());
         btnAddToBasket.click();
     }
 }
