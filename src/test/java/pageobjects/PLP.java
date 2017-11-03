@@ -16,7 +16,7 @@ public class PLP {
 
 
     @FindBys(@FindBy(xpath="//div/a[@class='c05__thumb-link thumb-link']"))
-    List<WebElement> plp;
+    List<WebElement> plpage;
 
 
 
@@ -26,7 +26,7 @@ public class PLP {
     }
 
     public void clickOnTheFirstProductInPLP(){
-        plp.get(0).click();
+        plpage.get(0).click();
     }
 
 }
