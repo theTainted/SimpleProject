@@ -13,6 +13,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.HomePage;
 import pageobjects.PDP;
+import pageobjects.PLP;
 
 import java.util.List;
 
@@ -63,14 +64,11 @@ public class AddAnItemToBasket {
         Thread.sleep(1000);
        // driver.findElement(By.xpath("//a[@class='btn-cancel c17__close c17__close--usp icon-close']")).click();
         homePage.selectCountry(driver,"Esp");
-       homePage.clickOnSearchIcon();
+        homePage.clickOnSearchIcon();
         homePage.enterSearchTextAndSearch("dress");
         Thread.sleep(5000);
-        List <WebElement> plp =driver.findElements(By.xpath("//div/a[@class='c05__thumb-link thumb-link']"));
-        plp.get(0).click();
-
-
-
+        PLP plp = new PLP(driver);
+        plp.clickOnTheFirstProductInPLP();
        PDP pdp = new PDP(driver);
        Thread.sleep(3000);
        pdp.clickOnFirstAvailableSize();
