@@ -1,8 +1,6 @@
 package pageobjects;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
@@ -26,8 +24,14 @@ public class HomePage extends Utilities {
     WebElement btnOnCookieAlert;
     @FindBy(xpath="//h1/span[@class='c11__title']")
     WebElement titleSearchResults;
-
-
+    @FindBy(linkText="Netherlands")
+    WebElement country;
+    @FindBy(css="span.ui-selectmenu-text")
+    WebElement countrySelector;
+    @FindBys(@FindBy(xpath="//div[@class='ui-selectmenu-menu ui-front ui-selectmenu-open']//ul[@id='country-selector-menu']/li"))
+    List<WebElement>  listOfCountries;
+    @FindBy(xpath="//button[@class='button button-large button-primary c13__country-selector-button-single']")
+    WebElement btnGo;
     public HomePage(WebDriver driver) {
 
        // Utilities.driver=driver; //-> added after making the driver static
@@ -71,5 +75,23 @@ public class HomePage extends Utilities {
 
         }
 
+    }
+
+    public void selectCountry(WebDriver driver,String partialCountryName){
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click()", country);
+        countrySelector.click();
+        ;
+        int countryList = listOfCountries.size();
+     //   System.out.println("CountryListSize : "+countryList);
+        for (WebElement countryName: listOfCountries){
+            System.out.println("Country Name : "+countryName.getText());
+            if (countryName.getText().contains("ESP")){
+                countryName.click();
+                btnGo.click();
+                break;
+            }
+        }
     }
 }
