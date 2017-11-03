@@ -59,7 +59,7 @@ public class AddAnItemToBasket {
         homePage.clickOnbtnCloseNewsLetter();
         homePage.clickOnCookieAlert();
         homePage.clickOnSearchIcon();
-        homePage.enterSearchTextAndSearch("13223971004");
+        homePage.enterSearchTextAndSearch("dress");
         Thread.sleep(5000);
         PDP pdp = new PDP(driver);
         pdp.clickOnFirstAvailableSize();
