@@ -35,6 +35,11 @@ public class HomePage extends Utilities {
     }
 
     public void clickOnbtnCloseNewsLetter(){
+        int sizebtnCloseNewsLetter;
+        sizebtnCloseNewsLetter = btnCloseNewsLetter.size();
+        if (sizebtnCloseNewsLetter!=0){
+            btnCloseNewsLetter.get(0).click();
+        }
 
     }
 
