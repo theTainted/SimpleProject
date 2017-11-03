@@ -86,7 +86,7 @@ public class HomePage extends Utilities {
         int countryList = listOfCountries.size();
      //   System.out.println("CountryListSize : "+countryList);
         for (WebElement countryName: listOfCountries){
-            System.out.println("Country Name : "+countryName.getText());
+          //  System.out.println("Country Name : "+countryName.getText());
             if (countryName.getText().contains("ESP")){
                 countryName.click();
                 btnGo.click();
