@@ -15,7 +15,7 @@ public class PDP extends Utilities{
 
     @FindBys(@FindBy(xpath="//div[@class='c02__sizes']//ul[@class='swatches c02__size-list size-list']//li[@class='c02__size-item swatch-item available']//a"))
      public   List<WebElement> sizePresent;
-    @FindBy(id="add-to-cart")
+    @FindBy(xpath="//button[@id='add-to-cart']")
     public WebElement btnAddToBasket;
 
 
@@ -27,7 +27,6 @@ public class PDP extends Utilities{
     }
     public void clickOnFirstAvailableSize(){
         String firstAvailableSize=sizePresent.get(0).getText();
-
         sizePresent.get(0).click();
 
     }
