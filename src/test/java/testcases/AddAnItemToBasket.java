@@ -16,7 +16,7 @@ import java.util.List;
 
 public class AddAnItemToBasket {
     public static WebDriver driver; // changed to static
-    public String sURL = "https://" + "storefront" + ":" + "storefront" + "@" + "staging.cortefiel.com/es/es";
+    public String sURL = "https://" + "storefront" + ":" + "storefront" + "@" + "demo.cortefiel.com/es/es";
 
 
     @BeforeClass
