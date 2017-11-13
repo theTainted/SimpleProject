@@ -73,6 +73,8 @@ public class GuestCheckOut {
         pdp.clickOnMiniBasketIcon();
         ShoppingBasket sb = new ShoppingBasket(driver);
         sb.clickOnContinueButton();
+        Checkout checkout = new Checkout(driver);
+        checkout.clickOnGuestCheckout();
 
 
     }
