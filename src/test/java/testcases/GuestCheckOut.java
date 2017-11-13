@@ -79,6 +79,7 @@ public class GuestCheckOut {
 
        System.out.println(("first" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_true")).getAttribute("value")));
         System.out.println(("second" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value")));
+       String value = driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value");
 
     }
 }
