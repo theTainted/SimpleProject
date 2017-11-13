@@ -17,6 +17,9 @@ public class PDP extends Utilities{
      public   List<WebElement> sizePresent;
     @FindBy(xpath="//button[@id='add-to-cart']")
     public WebElement btnAddToBasket;
+    @FindBys(@FindBy(xpath="//span[@class='c15-icon-link__icon icon-bag']"))
+    public List<WebElement> miniBasketIcon;
+
 
 
 
@@ -33,5 +36,8 @@ public class PDP extends Utilities{
     public void clickAddToBasketButton(){
         System.out.println(btnAddToBasket.isDisplayed());
         btnAddToBasket.click();
+    }
+    public void clickOnMiniBasketIcon(){
+        miniBasketIcon.get(0).click();
     }
 }
