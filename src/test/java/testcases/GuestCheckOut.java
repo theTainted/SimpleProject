@@ -75,7 +75,7 @@ public class GuestCheckOut {
         sb.clickOnContinueButton();
         Checkout checkout = new Checkout(driver);
         checkout.clickOnGuestCheckout();
-
+        checkout.selectradioButtonHomeDelivery();
 
     }
 }
