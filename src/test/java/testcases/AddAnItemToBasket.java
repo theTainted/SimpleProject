@@ -74,6 +74,13 @@ public class AddAnItemToBasket {
         pdp.clickOnFirstAvailableSize();
         Thread.sleep(1000);
         pdp.clickAddToBasketButton();
+        pdp.clickOnMiniBasketIcon();
+
+
+
+
+
+
 
 
 
