@@ -75,7 +75,10 @@ public class GuestCheckOut {
         sb.clickOnContinueButton();
         Checkout checkout = new Checkout(driver);
         checkout.clickOnGuestCheckout();
-        checkout.selectradioButtonHomeDelivery();
+     //   checkout.selectradioButtonHomeDelivery();
+
+       System.out.println(("first" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_true")).getAttribute("value")));
+        System.out.println(("second" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value")));
 
     }
 }
