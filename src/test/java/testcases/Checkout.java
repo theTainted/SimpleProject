@@ -13,12 +13,19 @@ public class Checkout {
 
    @FindBy(xpath="//button[@name='dwfrm_login_unregistered']")
    public WebElement btnGuestUser;
-
+   @FindBy(id="dwfrm_singleshipping_inStoreShipments_homedelivery_false")
+   public WebElement rdoHomeDelivery;
 
     public  Checkout (WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
     public void clickOnGuestCheckout(){
         btnGuestUser.click();
+    }
+    public void selectradioButtonHomeDelivery(){
+        if(rdoHomeDelivery.isSelected()==false){
+            rdoHomeDelivery.click();
+
+        }
     }
 }
