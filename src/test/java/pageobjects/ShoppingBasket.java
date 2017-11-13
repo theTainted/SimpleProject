@@ -10,7 +10,7 @@ public class ShoppingBasket {
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
-@FindBy(xpath="button button-large button-primary button-block")
+@FindBy(xpath="//button[@class='button button-large button-primary button-block')]")
 public WebElement btnContinue;
 
 
