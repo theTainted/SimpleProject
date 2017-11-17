@@ -2,6 +2,7 @@ package testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -12,6 +13,8 @@ import pageobjects.HomePage;
 import pageobjects.PDP;
 import pageobjects.PLP;
 import pageobjects.ShoppingBasket;
+
+import java.util.List;
 
 public class GuestCheckOut {
     public static WebDriver driver; // changed to static
@@ -77,9 +80,19 @@ public class GuestCheckOut {
         checkout.clickOnGuestCheckout();
      //   checkout.selectradioButtonHomeDelivery();
 
-       System.out.println(("first" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_true")).getAttribute("value")));
+   /*    System.out.println(("first" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_true")).getAttribute("value")));
         System.out.println(("second" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value")));
-       String value = driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value");
+       String value = driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value");*/
+   int size = driver.findElements(By.xpath("//label[@class='control-label']")).size();
+      //  List <WebElement> labels = driver.findElements(By.xpath("//span[@class='control radio']//label[@class='control-label']"));
+        List <WebElement> labels = driver.findElements(By.xpath("//span[@class='control radio']"));
+        for(WebElement test:labels){
+            System.out.println(test.getText());
+            if(test.getText().contains("Recoger ")){
+                test.click();
+
+        }
+        }
 
     }
 }
