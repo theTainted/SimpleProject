@@ -1,4 +1,4 @@
-package testcases;
+package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,10 +11,10 @@ public class Checkout {
     SoftAssert softAssert =new SoftAssert();
     Utilities utilities = new Utilities();
 
-   @FindBy(xpath="//button[@name='dwfrm_login_unregistered']")
-   public WebElement btnGuestUser;
-   @FindBy(id="dwfrm_singleshipping_inStoreShipments_homedelivery_true")
-   public WebElement rdoHomeDelivery;
+    @FindBy(xpath="//button[@name='dwfrm_login_unregistered']")
+    public WebElement btnGuestUser;
+    @FindBy(id="dwfrm_singleshipping_inStoreShipments_homedelivery_true")
+    public WebElement rdoHomeDelivery;
 
     public  Checkout (WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -23,7 +23,7 @@ public class Checkout {
         btnGuestUser.click();
     }
     public void selectradioButtonHomeDelivery(){
-       String value = rdoHomeDelivery.getAttribute("value");
+        String value = rdoHomeDelivery.getAttribute("value");
         System.out.println(value);
     }
 }
