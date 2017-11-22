@@ -84,13 +84,13 @@ public class GuestCheckOut {
         System.out.println(("second" + driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value")));
        String value = driver.findElement(By.id("dwfrm_singleshipping_inStoreShipments_homedelivery_false")).getAttribute("value");*/
    int size = driver.findElements(By.xpath("//label[@class='control-label']")).size();
-      //  List <WebElement> labels = driver.findElements(By.xpath("//span[@class='control radio']//label[@class='control-label']"));
-        List <WebElement> labels = driver.findElements(By.xpath("//span[@class='control radio']"));
+      List <WebElement> labels = driver.findElements(By.xpath("//span[@class='control radio']//label[@class='control-label']"));
+
         for(WebElement test:labels){
             System.out.println(test.getText());
             if(test.getText().contains("Recoger ")){
                 test.click();
-
+            break;
         }
         }
 
