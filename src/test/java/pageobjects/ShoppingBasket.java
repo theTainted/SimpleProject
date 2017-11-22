@@ -35,5 +35,7 @@ public List<WebElement> labelsShippingMethods;
                 shippingMethod.click();
                 break;
             }
+        }
     }
 }
+
