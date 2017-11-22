@@ -71,7 +71,7 @@ public class GuestCheckOut {
         sb.clickOnContinueButton();
         Checkout checkout = new Checkout(driver);
         checkout.clickOnGuestCheckout();
-        checkout.clickOnShipmentMethods("Recoger");
+        checkout.clickOnShipmentMethods("domicilio");
 
     }
 }
