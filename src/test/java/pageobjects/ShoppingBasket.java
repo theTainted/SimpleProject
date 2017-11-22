@@ -16,8 +16,6 @@ public class ShoppingBasket {
 
 @FindBy(xpath="//form[@id='checkout-form']//button[@class='button button-large button-primary button-block']")
 public WebElement btnContinue;
-@FindBys(@FindBy(xpath="//span[@class='control radio']//label[@class='control-label']"))
-public List<WebElement> labelsShippingMethods;
 
     public  ShoppingBasket(WebDriver driver){
         PageFactory.initElements(driver,this);
@@ -28,14 +26,6 @@ public List<WebElement> labelsShippingMethods;
         btnContinue.click();
     }
 
-    public void clickOnShipmentMethods(String partialShippingMethodLabel){
-        for(WebElement shippingMethod:labelsShippingMethods){
-            System.out.println(shippingMethod.getText());
-            if(shippingMethod.getText().contains("Recoger ")){
-                shippingMethod.click();
-                break;
-            }
-        }
-    }
+
 }
 
