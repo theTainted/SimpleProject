@@ -34,7 +34,7 @@ public class Checkout {
     public void clickOnShipmentMethods(String partialShippingMethodLabel){
         for(WebElement shippingMethod:labelsShippingMethods){
             System.out.println(shippingMethod.getText());
-            if(shippingMethod.getText().contains("Recoger ")){
+            if(shippingMethod.getText().contains(partialShippingMethodLabel)){
                 shippingMethod.click();
                 break;
             }
