@@ -73,6 +73,6 @@ public class GuestCheckOut {
         checkout.clickOnGuestCheckout();
         checkout.clickOnShipmentMethods("domicilio");
         checkout.enterShippingAddressFirstName("tester");
-
+        checkout.enterShippingAddressLastName("testerL");
     }
 }
