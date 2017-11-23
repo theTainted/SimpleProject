@@ -72,6 +72,7 @@ public class GuestCheckOut {
         Checkout checkout = new Checkout(driver);
         checkout.clickOnGuestCheckout();
         checkout.clickOnShipmentMethods("domicilio");
+        checkout.enterShippingAddressFirstName("tester");
 
     }
 }
