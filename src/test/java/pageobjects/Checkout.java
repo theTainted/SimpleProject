@@ -24,6 +24,11 @@ public class Checkout {
     public WebElement shippingAddressFirstName;
     @FindBy(id="dwfrm_singleshipping_shippingAddress_addressFields_lastName")
     public WebElement shippingAddressLastName;
+    @FindBy(id="dwfrm_singleshipping_shippingAddress_addressFields_address1")
+    public WebElement shippingAddressAdress1;
+    @FindBy(id="dwfrm_singleshipping_shippingAddress_addressFields_postal")
+    public WebElement shippingAddressPostalCode;
+
 
     public  Checkout (WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -49,5 +54,11 @@ public class Checkout {
     }
     public void enterShippingAddressLastName(String shippingLastName){
         shippingAddressLastName.sendKeys(shippingLastName);
+    }
+    public void enterShippingAddressLine1(String shippingAddressLine1){
+        shippingAddressLastName.sendKeys(shippingAddressLine1);
+    }
+    public void enterShippingAddressPostalCode(String shippingPostalCode){
+        shippingAddressLastName.sendKeys(shippingPostalCode);
     }
 }

@@ -74,5 +74,7 @@ public class GuestCheckOut {
         checkout.clickOnShipmentMethods("domicilio");
         checkout.enterShippingAddressFirstName("tester");
         checkout.enterShippingAddressLastName("testerL");
+        checkout.enterShippingAddressLine1("Line 1");
+        checkout.enterShippingAddressPostalCode("28030");
     }
 }
