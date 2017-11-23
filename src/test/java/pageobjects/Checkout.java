@@ -56,9 +56,9 @@ public class Checkout {
         shippingAddressLastName.sendKeys(shippingLastName);
     }
     public void enterShippingAddressLine1(String shippingAddressLine1){
-        shippingAddressLastName.sendKeys(shippingAddressLine1);
+        shippingAddressAdress1.sendKeys(shippingAddressLine1);
     }
     public void enterShippingAddressPostalCode(String shippingPostalCode){
-        shippingAddressLastName.sendKeys(shippingPostalCode);
+        shippingAddressPostalCode.sendKeys(shippingPostalCode);
     }
 }
