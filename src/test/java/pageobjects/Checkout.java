@@ -20,6 +20,8 @@ public class Checkout {
     public WebElement rdoHomeDelivery;
     @FindBys(@FindBy(xpath="//span[@class='control radio']//label[@class='control-label']"))
     public List<WebElement> labelsShippingMethods;
+    @FindBy(id="dwfrm_singleshipping_shippingAddress_addressFields_firstName")
+    public WebElement shippingAddressFirstName;
 
     public  Checkout (WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -39,5 +41,8 @@ public class Checkout {
                 break;
             }
         }
+    }
+    public void enterShippingAddressFirstName(String shippingFirstName){
+        shippingAddressFirstName.sendKeys(shippingFirstName);
     }
 }
