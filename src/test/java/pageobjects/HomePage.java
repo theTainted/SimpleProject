@@ -91,7 +91,7 @@ public class HomePage extends Utilities {
              //  System.out.println("Country Name : "+countryName.getText());
            // if (countryName.getText().contains(partialCountryName)){
             if(countryName.getText().toLowerCase().contains(partialCountryName.toLowerCase())){
-                System.out.println("inside if");
+
                 countryName.click();
                 btnGo.click();
                 break;
