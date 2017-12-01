@@ -84,12 +84,14 @@ public class HomePage extends Utilities {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", country);
         countrySelector.click();
-        ;
+
         int countryList = listOfCountries.size();
      //   System.out.println("CountryListSize : "+countryList);
         for (WebElement countryName: listOfCountries){
-          //  System.out.println("Country Name : "+countryName.getText());
-            if (countryName.getText().contains("ESP")){
+             //  System.out.println("Country Name : "+countryName.getText());
+           // if (countryName.getText().contains(partialCountryName)){
+            if(countryName.getText().toLowerCase().contains(partialCountryName.toLowerCase())){
+                System.out.println("inside if");
                 countryName.click();
                 btnGo.click();
                 break;
