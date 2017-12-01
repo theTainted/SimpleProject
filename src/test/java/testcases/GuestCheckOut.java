@@ -11,7 +11,7 @@ import pageobjects.*;
 
 public class GuestCheckOut {
     public static WebDriver driver; // changed to static
-    public String sURL = "https://" + "storefront" + ":" + "storefront" + "@" + "development.cortefiel.com/es/es";
+    public String sURL = "https://" + "storefront" + ":" + "storefront" + "@" + "development.womensecret.com/es/es";
 
 
     @BeforeClass
