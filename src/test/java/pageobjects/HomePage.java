@@ -20,8 +20,8 @@ public class HomePage extends Utilities {
     WebElement txtSearchBox;
     @FindBy(xpath="//button[@class='c16__button icon']/span[@class='icon-search']")
     WebElement iconSearch;
-    @FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']")
-    WebElement btnOnCookieAlert;
+    @FindBys(@FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']"))
+      List<WebElement> btnOnCookieAlert;
     @FindBy(xpath="//h1/span[@class='c11__title']")
     WebElement titleSearchResults;
     @FindBy(linkText="Netherlands")
@@ -48,9 +48,11 @@ public class HomePage extends Utilities {
     }
 
     public void clickOnCookieAlert(){
-        if(btnOnCookieAlert.isDisplayed()){
+        int sizebtnCookieAlert;
+        sizebtnCookieAlert = btnOnCookieAlert.size()
+        if(sizebtnCookieAlert!=0){
 
-            btnOnCookieAlert.click();
+            btnOnCookieAlert.get(0).click();
         }
     }
     public void clickOnSearchIcon(){
