@@ -49,7 +49,7 @@ public class HomePage extends Utilities {
 
     public void clickOnCookieAlert(){
         int sizebtnCookieAlert;
-        sizebtnCookieAlert = btnOnCookieAlert.size()
+        sizebtnCookieAlert = btnOnCookieAlert.size();
         if(sizebtnCookieAlert!=0){
 
             btnOnCookieAlert.get(0).click();
