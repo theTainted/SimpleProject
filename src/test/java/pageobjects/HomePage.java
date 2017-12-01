@@ -19,6 +19,7 @@ public class HomePage extends Utilities {
     @FindBy(xpath="//input[@type='search']")
     WebElement txtSearchBox;
     @FindBy(xpath="//button[@class='c16__button icon']/span[@class='icon-search']")
+   // @FindBy(xpath="//span[contains(@class,'icon-search')]")
     WebElement iconSearch;
     @FindBys(@FindBy(xpath="//a[@class='btn-cancel c09__close c09__close--cookie']"))
       List<WebElement> btnOnCookieAlert;

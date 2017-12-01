@@ -55,9 +55,10 @@ public class GuestCheckOut {
         homePage.clickOnCookieAlert();
         Thread.sleep(1000);
         // driver.findElement(By.xpath("//a[@class='btn-cancel c17__close c17__close--usp icon-close']")).click();
-        homePage.selectCountry(driver, "Esp");
+        homePage.selectCountry(driver, "ESP");
+        Thread.sleep(2000);
         homePage.clickOnSearchIcon();
-        homePage.enterSearchTextAndSearch("dress");
+    homePage.enterSearchTextAndSearch("dress");
         Thread.sleep(5000);
         PLP plp = new PLP(driver);
         plp.clickOnTheFirstProductInPLP();
